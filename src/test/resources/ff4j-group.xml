@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<features>
+  <feature-group name="summer">
+    <feature uid="sun"  enable="false" />
+    <feature uid="bay"  enable="false" />
+  </feature-group>
+</features>

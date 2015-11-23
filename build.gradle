@@ -1,0 +1,28 @@
+buildscript {
+	repositories.mavenCentral()
+	dependencies {
+		classpath "org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE"
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+// これが無いとeclipseのclasspathファイル等が生成されず、コンパイルに失敗する
+apply plugin: 'eclipse'
+
+repositories.mavenCentral()
+
+sourceCompatibility = targetCompatibility = 1.8
+
+tasks.withType(AbstractCompile)*.options*.encoding = "UTF-8"
+
+dependencies {
+	compile "org.ff4j:ff4j-core:1.3.1"
+	compile "org.ff4j:ff4j-aop:1.3.1"
+	compile "org.ff4j:ff4j-web:1.3.1"
+	
+	compile "org.springframework.boot:spring-boot-starter-web"
+	compile "com.sun.jersey:jersey-servlet:1.18.1"
+
+	testCompile "org.springframework.boot:spring-boot-starter-test"
+}
