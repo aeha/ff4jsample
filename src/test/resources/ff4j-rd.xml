@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<features>
+  <feature uid="salad" enable="true">
+    <flipstrategy class="org.ff4j.strategy.ReleaseDateFlipStrategy">
+      <param name="releaseDate">2015-07-06-12:00</param>
+    </flipstrategy>
+  </feature>
+</features>
