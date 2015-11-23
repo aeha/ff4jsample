@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<features>
+  <feature uid="winter" enable="true" />
+  <feature uid="morning" enable="false" />
+  <feature uid="climbing" enable="true">
+    <flipstrategy class="org.ff4j.strategy.el.ExpressionFlipStrategy">
+      <param name="expression"><![CDATA[!winter | morning]]></param>
+    </flipstrategy>
+  </feature>
+  <feature uid="skiing" enable="true">
+    <flipstrategy class="org.ff4j.strategy.el.ExpressionFlipStrategy">
+      <param name="expression"><![CDATA[winter & morning]]></param>
+    </flipstrategy>
+  </feature>
+</features>
